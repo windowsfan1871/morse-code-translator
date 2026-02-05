@@ -58,6 +58,10 @@ morse_code_char_t morse_code_char_arr[] = {
 	{".----.", '\''}, 
 	{".-..-.", '"'}, 
 	{"/", ' '},
+	{"-.--.", '('},
+	{"-.--.-", ')'},
+	{"..--.-", '_'},
+	{"-..-.", '/'},
 };
 
 const int morse_code_char_count = sizeof(morse_code_char_arr) / sizeof(morse_code_char_arr[0]);
@@ -117,7 +121,7 @@ int morse_to_str(const char* input_filename, const char* output_filename) {
 
 int main(int argc, char** argv) {
 	if(argc < 3) { 
-		printf("Usage: %s <input> <output>\n", argv[0]);
+		printf("Usage: %s <input morse code file> <output text file>\n", argv[0]);
 		return -1;
 	}
 

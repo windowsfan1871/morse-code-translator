@@ -104,6 +104,12 @@ const char* morse_code[] = {
 	".----. ",
 	/* " */
 	".-..-. ",
+	/* ( */
+	"-.--. ",
+	/* ) */
+	"-.--.- ",
+	/* _ */
+	"..--.- ",
 };
 
 const char* char_to_morse(char c) {
@@ -151,6 +157,15 @@ const char* char_to_morse(char c) {
 
 	else if(c == '"')
 		return morse_code[48];
+
+	else if(c == '(')
+		return morse_code[49];
+
+	else if(c == ')')
+		return morse_code[50];
+
+	else if(c == '_')
+		return morse_code[51];
 
 	else
 		return "";
